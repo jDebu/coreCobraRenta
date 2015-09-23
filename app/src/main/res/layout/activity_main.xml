@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:id="@+id/containerInside"
+        android:background="#FF8989"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:layout_margin="32dp"
+        android:orientation="vertical">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/my_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:descendantFocusability="beforeDescendants" >
+        </android.support.v7.widget.RecyclerView>
+        <RelativeLayout
+            android:id="@+id/containerInputIni"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <android.support.design.widget.TextInputLayout
+                android:layout_alignParentLeft="true"
+                android:id="@+id/inputCantHabit"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:id="@+id/cantHabit"
+                    android:textSize="14sp"
+                    android:hint="Numero de habitaciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </android.support.design.widget.TextInputLayout>
+            <Button
+                android:id="@+id/okCantHabit"
+                android:layout_toRightOf="@+id/inputCantHabit"
+                android:text="OK"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="add" />
+
+
+
+</LinearLayout>
